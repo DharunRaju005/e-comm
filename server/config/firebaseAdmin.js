@@ -1,4 +1,7 @@
-const serviceAccount = require('../serviceAccountKey.json'); // Path to your downloaded service account key
+// const serviceAccount = require('../serviceAccountKey.json'); // Path to your downloaded service account key
+const dotenv = require("dotenv");
+dotenv.config();
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
 const admin = require("firebase-admin");
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
