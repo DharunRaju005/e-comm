@@ -12,7 +12,7 @@ const axios=require('axios');
 dotenv.config();
 // stripe listen --forward-to localhost:5000/payment/webhook
 
-const stripe = require('stripe')(STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const makePayment = async (req, res) => {
     const userId = req.user.id;
