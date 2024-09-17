@@ -9,7 +9,7 @@ const commentSchema=new mongoose.Schema({
     user:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User',
-        unique:true,
+        //unique:true,
         required:true
     },
     rating:{
