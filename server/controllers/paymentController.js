@@ -51,7 +51,7 @@ const makePayment = async (req, res) => {
             }
         });
         console.log("line 50",session);
-        return res.status(200).json({ id: session.id });
+        return res.status(200).json({ id: session.id,url:session.url});
     } catch (err) {
         return res.status(500).json({ message: err.message });
     }
